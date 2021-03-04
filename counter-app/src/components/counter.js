@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-    render() { 
-        return <h1>Hello World...</h1>;
+    render() {
+        return (
+          <div>
+            <h1>Helle World...</h1>
+            <button>Inc</button>
+          </div>
+        );
     }
 }
  

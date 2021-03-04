@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-  state = { count: 0 };
+  state = { 
+    count: 0,
+    tags:["tag1","tag2","tag3"]
+  
+  };
 
     render() {
         return (
           <div>
             <h1 className={this.getBadgeClasses()}>{this.foratCount()}</h1>
             <button className="btn btn-secondary btn-sm">Inc</button>
+            <ui>{this.state.tags.map(o=> <li key={o}> {o} </li> )}</ui>
           </div>
         );
     }

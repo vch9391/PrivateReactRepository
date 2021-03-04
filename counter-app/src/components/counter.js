@@ -6,11 +6,17 @@ class Counter extends Component {
     render() {
         return (
           <div>
-            <h1 className="badge badge-primary m-2">{this.foratCount()}</h1>
+            <h1 className={this.getBadgeClasses()}>{this.foratCount()}</h1>
             <button className="btn btn-secondary btn-sm">Inc</button>
           </div>
         );
     }
+
+  getBadgeClasses() {
+    let classes = "badge m-2 badge-";
+    classes += (this.state.count === 0) ? "warning" : "primary";
+    return classes;
+  }
 
     foratCount(){
       const {count} = this.state;

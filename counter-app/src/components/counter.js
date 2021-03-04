@@ -2,31 +2,22 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
   state = { 
-    count: 0,
-    tags:["tag1","tag2","tag3"]
-  
+    tags:[]
   };
-
-    render() {
-        return (
-          <div>
-            <h1 className={this.getBadgeClasses()}>{this.foratCount()}</h1>
-            <button className="btn btn-secondary btn-sm">Inc</button>
-            <ui>{this.state.tags.map(o=> <li key={o}> {o} </li> )}</ui>
-          </div>
-        );
-    }
-
-  getBadgeClasses() {
-    let classes = "badge m-2 badge-";
-    classes += (this.state.count === 0) ? "warning" : "primary";
-    return classes;
+  
+  renderTags() {
+    if (this.state.tags.length === 0) return <p>There is no tags</p>
+    return <ui>{this.state.tags.map(o=> <li key={o}> {o} </li> )}</ui>
   }
 
-    foratCount(){
-      const {count} = this.state;
-      return count === 0 ? "Zero" : count;
-    }
+  render() {
+    return (
+    <div>
+      {this.state.tags.length === 0 && "Please create new Tags"}
+      {this.renderTags()}
+    </div>
+    );
+  }
 }
  
 export default Counter;

@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.css";
-import Counteraa from "./components/counter";
+import Counteraa from "./components/counters";
 
 ReactDOM.render(<Counteraa/> ,document.getElementById('root'));
 

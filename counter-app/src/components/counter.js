@@ -1,20 +1,11 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-  state = { count: 0 };
-
-  // constructor(){
-  //   super();
-  //   this.handleIncrement = this.handleIncrement.bind(this);
-  // }
-
-  // handleIncrement(){
-  //   console.log("Increment called",this);
-  // }
+  value = { count: this.props.value };
 
    handleIncrement = (product) => {
     console.log(product);
-    this.setState({count: this.state.count+1});
+    this.setState({value: this.value.count+1});
   }
     render() {
         return (
@@ -26,7 +17,7 @@ class Counter extends Component {
     }
 
     foratCount(){
-      const {count} = this.state;
+      const {count} = this.value;
       return count === 0 ? "Zero" : count;
     }
 }

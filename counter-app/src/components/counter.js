@@ -3,11 +3,23 @@ import React, { Component } from 'react';
 class Counter extends Component {
   state = { count: 0 };
 
+  // constructor(){
+  //   super();
+  //   this.handleIncrement = this.handleIncrement.bind(this);
+  // }
+
+  // handleIncrement(){
+  //   console.log("Increment called",this);
+  // }
+
+  handleIncrement = () => {
+    console.log("Increment called",this);
+  }
     render() {
         return (
           <div>
             <h1 className="badge badge-primary m-2">{this.foratCount()}</h1>
-            <button className="btn btn-secondary btn-sm">Inc</button>
+            <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Inc</button>
           </div>
         );
     }

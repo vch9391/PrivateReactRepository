@@ -15,7 +15,11 @@ class Counters extends Component {
     render() {
         return (
             <div>
-                {this.value.counters.map( o => <Counter key={o.id} value={o.value} selectrd={true} />)}
+                {this.value.counters.map( o => 
+                <Counter key={o.id} value={o.value}>
+                    <h6>Counter Id: {o.id}</h6>
+                </Counter>
+                )}
             </div>
         );
     }

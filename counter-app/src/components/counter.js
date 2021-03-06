@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class Counter extends Component {
 
   render() {
+    console.log('Counter - Render');
     return (
     <div>
       <span className={this.getBadgeClasses()}>{this.foratCount()}</span>
